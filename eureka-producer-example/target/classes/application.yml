@@ -1,0 +1,10 @@
+logging:
+  config: classpath:config/logback-spring.xml
+spring:
+  profiles:
+    active: dev
+  application:
+    name: eureka-producer
+server:
+  servlet:
+    context-path: /eureka/producer

@@ -1,0 +1,11 @@
+server:
+  port: 8762
+eureka:
+  instance:
+    hostname: c-128
+  client:
+    service-url:
+      defaultZone: ${my.service.host}/eureka/
+my:
+  service:
+    host: http://${eureka.instance.hostname}:8761/eureka/server
