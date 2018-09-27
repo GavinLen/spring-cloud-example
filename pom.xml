@@ -16,6 +16,7 @@
         <module>eureka-producer-example</module>
         <module>ribbon-customer-example</module>
         <module>feign-customer-example</module>
+        <module>zuul-server-example</module>
     </modules>
 
     <!-- Inherit defaults from Spring Boot -->

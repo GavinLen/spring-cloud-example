@@ -1,6 +1,7 @@
 package xyz.ieden.ribbon.customer.service.impl;
 
 import com.alibaba.fastjson.JSONObject;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,7 @@ public class HelloServiceImpl implements IHelloService {
     @Autowired
     private RestTemplate restTemplate;
 
+    @HystrixCommand(fallbackMethod = "error")
     @Override
     public String getHomeIndex() throws Exception {
         String reqUrl = PRODUCER_SERVER + "home/index";
@@ -34,5 +36,9 @@ public class HelloServiceImpl implements IHelloService {
         LOGGER.info("Result Info:{}.", result.toString());
         String resultStr = JSONObject.toJSONString(result);
         return resultStr;
+    }
+
+    public String error() {
+        return "error";
     }
 }

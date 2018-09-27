@@ -1,0 +1,10 @@
+logging:
+  config: classpath:config/logback-spring.xml
+spring:
+  profiles:
+    active: dev
+  application:
+    name: zuul-server
+server:
+  servlet:
+    context-path: /zuul/server

@@ -14,7 +14,17 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
+    <name>config-server-example</name>
+    <description>Config Server 实现配置中心</description>
+
     <dependencies>
+
+        <dependency>
+            <groupId>xyz.ieden</groupId>
+            <artifactId>commons-core</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-config-server</artifactId>
