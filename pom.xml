@@ -11,7 +11,12 @@
 
     <modules>
         <module>commons-core</module>
+        <module>registry-server-eureka</module>
+        <module>producer-eureka</module>
+        <module>customer-ribbon</module>
+
         <module>config-server-example</module>
+        <module>config-client-example</module>
         <module>eureka-server-example</module>
         <module>eureka-producer-example</module>
         <module>ribbon-customer-example</module>

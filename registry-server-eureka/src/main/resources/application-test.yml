@@ -1,0 +1,10 @@
+server:
+  port: 9000
+eureka:
+  instance:
+    hostname: 192.168.80.128
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/

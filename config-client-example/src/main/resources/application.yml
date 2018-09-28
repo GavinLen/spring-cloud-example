@@ -1,0 +1,10 @@
+logging:
+  config: classpath:config/logback-spring.xml
+spring:
+  profiles:
+    active: dev
+  application:
+    name: config-client
+server:
+  servlet:
+    context-path: /config/client

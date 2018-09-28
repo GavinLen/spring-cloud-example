@@ -1,0 +1,14 @@
+logging:
+  config: classpath:config/logback-spring.xml
+
+server:
+  servlet:
+    context-path: /server/registry
+  tomcat:
+    uri-encoding: utf-8
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: registry-server

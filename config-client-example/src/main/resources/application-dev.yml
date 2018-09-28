@@ -1,0 +1,7 @@
+server:
+  port: 8881
+spring:
+  cloud:
+    config:
+      label: master
+      uri: http://localhost:8880/
